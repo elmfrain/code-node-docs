@@ -1,0 +1,6 @@
+[book]
+authors = ["elmfrain"]
+language = "en"
+multilingual = false
+src = "src"
+title = "CodeNode Microcontrollers Documentation"
