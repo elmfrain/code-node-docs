@@ -36,10 +36,6 @@ The module has a buffer of `64` bytes to store the state of every pin (not all c
 Since Redstone signals has a range of `0` through `15`, only the first four bits of a byte pin are used by the pin drivers. In essence, pin values should not increment over `15` as it will cause an undesired effect of the pin value to overflow to `0` even though the pin value is not `0`. To further clarify, when pin values are represented as hexidecimal values, the second digit is ignored (ex. `0xC8` will just be `0x8`).
 
 This buffer can be **read** from the processor, but a byte pin can only be **written** to if the corresponding pin is an `OUTPUT`. If the pin is an `INPUT`, only the pin driver will write to the byte pin.
-#### Double Buffering
-One concept to note about the GPIOPV buffer is that it is **double buffered**, meaning that it has a **back-buffer** and a **front-buffer**. Since the processor can have a clock cycle faster than Minecraft's tick rate, any changes to the buffer is saved to its back-buffer. Upon the next game tick, the back-buffer is copied into the front-buffer and the front-buffer is sent to the pin drivers to carry out IO operations to or from the physical world.
-
-As far for the processor is concerned, the GPIOPV is a **single** buffer. When the processor **writes** to GPIOPV, it writes the back-buffer, and when it **reads** from GPIOPV, it reads the front-buffer. Thus, any writes to the buffer may not be reflected right away until the next game tick happens. This guarantees that all values read from GPIOPV are accuratlely representing the physical state of the pins.
 
 ## Pin Direction Buffer (GPIODIR)
 
@@ -52,10 +48,6 @@ When accessing this buffer, it is to be treated as an **array** of bits, so, for
 When the nth bit is a `0`, the nth pin is an `INPUT`. When the nth bit is a `1`, the nth pin is an `OUTPUT`. Note that when a pin is an `INPUT`, the corresponding byte pin cannot be written to by the processor, and it can only be written to by the pin driver.
 
 This buffer can be **read** from and **written** to by the processor.
-
-#### Double Buffering
-
-Similar to the GPIOPV buffer, the GPIODIR buffer is also **double buffered**. When the processor writes to the GPIODIR buffer, it writes to the back-buffer, and when it reads from the GPIODIR buffer, it reads from the front-buffer.
 
 ## Interrupt Type Buffer (GPIOINT)
 
