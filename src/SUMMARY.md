@@ -11,6 +11,7 @@
 # Modules
 
 - [GPIO](./modules/gpio.md)
+- [EL (Event Listener)](./modules/el.md)
 
 # Quick Reference
 
