@@ -16,7 +16,7 @@ To enable an interrupt for an event, you must set the corresponding bit in the *
 
 This module loops through each event and checks if interrupts are enabled for it. If it is **enabled** and the corresponding flag is set in the **Interrupt Flags Buffer**, the interrupt is triggered. If there are **unhandled** interrupts, the `IRQ` line of the processor will remain held `LOW` until all interrupts are **handled** (flags are cleared).
 
-For example, if the `Game Tick` event is enabled and the flag is set, the module will trigger an interrupt.
+For example, if the `Game Tick` event interrupt is enabled and the flag is set, the module will trigger an interrupt.
 
 ## Interrupt Control Buffer (ELICL)
 This module has a buffer of `8` bytes to store interrupt control data. Each bit in this buffer corresponds to an event (not all are used). If the bit is set, the interrupt for that event is enabled. If the bit is cleared, the interrupt for that event is disabled.
