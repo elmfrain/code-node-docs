@@ -10,8 +10,9 @@
 
 # Modules
 
-- [GPIO](./modules/gpio.md)
+- [GPIO (Input/Output Pins)](./modules/gpio.md)
 - [EL (Event Listener)](./modules/el.md)
+- [UART (Serial Communication)](./modules/uart.md)
 
 # Quick Reference
 
