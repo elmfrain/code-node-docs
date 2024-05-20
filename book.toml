@@ -4,3 +4,7 @@ language = "en"
 multilingual = false
 src = "src"
 title = "CodeNode Microcontrollers Documentation"
+
+[output.html]
+git-repository-url = "https://github.com/elmfrain/code-node-docs"
+edit-url-template = "https://github.com/elmfrain/code-node-docs/edit/master/{path}"
