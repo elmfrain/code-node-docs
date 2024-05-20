@@ -25,8 +25,8 @@ The **UARTSTS** register is used to check the status of the UART module. Here ar
 | Bit | Flag |
 |-------|-------|
 |7|**IRQ**|
-|6|N/U|
-|5|N/U|
+|6|_N/U_|
+|5|_N/U_|
 |4|**TX_BUFFER_EMPTY**|
 |3|**RX_BUFFER_FULL**|
 |2|**OVERRUN_ERROR**|
@@ -101,7 +101,7 @@ The **UARTCMD** register is used to configure how the module deals with received
 
 | Bit | Flag |
 |-------|-------|
-|7||
+|7|_N/U_|
 |6|**TX_PIN_ENABLE**|
 |5|**RX_PIN_ENABLE**|
 |4|**PARITY_TYPE**|
