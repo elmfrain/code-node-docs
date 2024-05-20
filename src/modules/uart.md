@@ -24,8 +24,8 @@ The **UARTSTS** register is used to check the status of the UART module. Here ar
 | Bit | Flag |
 |-------|-------|
 |7|**IRQ**|
-|6|_N/U_|
-|5|_N/U_|
+|6|N/U|
+|5|N/U|
 |4|**TX_BUFFER_EMPTY**|
 |3|**RX_BUFFER_FULL**|
 |2|**OVERRUN_ERROR**|
@@ -99,7 +99,7 @@ Obviously, since Minecraft only runs 20 ticks per second, the maximum baud rate 
 The **UARTCMD** register is used to configure how the module deals with received and transmitted data. Here are the list of command flags (_N/U_ means Not Used):
 | Bit | Flag |
 |-------|-------|
-|7|_N/U_|
+|7||
 |6|**TX_PIN_ENABLE**|
 |5|**RX_PIN_ENABLE**|
 |4|**PARITY_TYPE**|

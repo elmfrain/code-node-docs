@@ -40,11 +40,17 @@ The Nano has a 64KB address space, with 8KB of ROM and 512 bytes of RAM.
 | --- | --- | --- |
 | `0x0000` - `0x0200` | RAM | 256 bytes zero page memory \| 256 byte stack |
 | `0x7000` - `0x7070` | GPIO | Pin Control/Interrupts |
+| `0x7100` - `0x7110` | EL | Minecraft Event Listener |
+| `0x7200` - `0x7208` | UART | Serial Communication |
 | `0xE000` - `0x10000` | ROM | Program Code, Vectors, LUTs |
 
 ## Modules
 
 * [GPIO](../modules/gpio.md) - Control and read the state of the pins of a microcontroller via the processor's data bus. It has a buffer of `64` bytes to store the state of every pin, but only the first four are used by the pin drivers.
+
+* [EL](../modules/el.md) - Provides a simple way to listen for Minecraft events to execute code in response.
+
+* [UART](../modules/uart.md) - Serial communication module that allows the microcontroller to send and receive data to and from other devices.
 
 ## Registers
 
