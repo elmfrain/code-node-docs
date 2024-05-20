@@ -34,6 +34,8 @@ The **UARTSTS** register is used to check the status of the UART module. Here ar
 
 
 Reading this register will return the status of the UART module and clear the `IRQ`, `OVERRUN_ERROR`, `FRAME_ERROR`, and `PARITY_ERROR` flags.
+
+Writing to this register will trigger a software reset, which will clear all flags and reset the module's configuration to default.
 ### Status Flags
 * `IRQ` - **Interrupt Request**: This flag is set when the UART module has finished transmitting or receiving data if their respective interrupt enable bits are set in the **UARTCMD** register. If this flag is set, the `IRQ` line of the processor will be held `LOW` until the flag is cleared.
 
