@@ -21,6 +21,7 @@ If two microcontrollers are connected to each other, they must have the same con
 
 ## Status Register (UARTSTS)
 The **UARTSTS** register is used to check the status of the UART module. Here are the list of status flags (_N/U_ means Not Used):
+
 | Bit | Flag |
 |-------|-------|
 |7|**IRQ**|
@@ -97,6 +98,7 @@ Obviously, since Minecraft only runs 20 ticks per second, the maximum baud rate 
 
 ## Command Register (UARTCMD)
 The **UARTCMD** register is used to configure how the module deals with received and transmitted data. Here are the list of command flags (_N/U_ means Not Used):
+
 | Bit | Flag |
 |-------|-------|
 |7||

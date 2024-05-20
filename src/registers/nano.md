@@ -148,6 +148,7 @@ There are 7 registers in the UART module.
 
 ### UARTSTS (Status Register)
 The **UARTSTS** register is used to check the status of the UART module. Here are the list of status flags (_N/U_ means Not Used):
+
 | Bit | Flag |
 |-------|-------|
 |7|**IRQ**|
@@ -206,6 +207,7 @@ By default, it is set to `1` **stop bit**, `8` **data bits**, and a **baud rate*
 
 ### UARTCMD (Command Register)
 The **UARTCMD** register is used to configure how the module deals with received and transmitted data. Here are the list of command flags (_N/U_ means Not Used):
+
 | Bit | Flag |
 |-------|-------|
 |7|_N/U_|
